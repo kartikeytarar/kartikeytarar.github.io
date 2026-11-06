@@ -106,7 +106,7 @@ ul.bul li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height
   </div>
   <div class="tags"><span class="tag">SolidWorks</span><span class="tag">Fusion 360</span><span class="tag">FreeCAD + Python</span><span class="tag">AutoCAD</span><span class="tag">FEA</span><span class="tag">3D printing</span><span class="tag">Drawings · BOMs</span><span class="tag">Next.js · React</span><span class="tag">Web development</span></div>
   <nav class="toc" aria-label="Projects">
-    <a href="#payload">Drone payload release</a><a href="#dewleaf">Dewleaf</a><a href="#work">Scripted CAD and enclosures</a><a href="#texttocad">Text-to-CAD model</a><a href="#keo">KEO viewer</a><a href="#auv">Underwater vehicle</a><a href="#studies">Studies</a><a href="#web">Websites</a><a href="#experience">Experience</a>
+    <a href="#payload">Drone payload release</a><a href="#keo">KEO viewer</a><a href="#dewleaf">Dewleaf</a><a href="#work">Scripted CAD and enclosures</a><a href="#texttocad">Text-to-CAD model</a><a href="#auv">Underwater vehicle</a><a href="#studies">Studies</a><a href="#web">Websites</a><a href="#experience">Experience</a>
   </nav>
   <div class="titleblock"><b>KARTIKEY TARAR</b><span>COVER</span><span>SHEET 01 / 10</span></div>
 </section>
@@ -132,6 +132,31 @@ ul.bul li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height
   <div class="titleblock"><b>KARTIKEY TARAR</b><span>PAYLOAD RELEASE</span><span>SHEET 02 / 10</span></div>
 </section>
 
+<section class="sheet" id="keo" aria-labelledby="h-keo">
+  <div class="eyebrow">Software · personal project · Oct–Nov 2026</div>
+  <h2 id="h-keo">KEO: a head- and hand-controlled CAD viewer in the browser</h2>
+  <p class="lead">A prototype that shows a CAD model at real size in a plain browser tab. The webcam tracks your head so the model appears to sit behind the screen, and your hands explode, assemble, select and zoom it. I built it with AI assistance (Claude) to see whether a design review could work without a headset.</p>
+  <figure><video controls playsinline preload="metadata" poster="assets/keo/keo-poster.jpg" src="assets/keo/keo-demo.mp4"></video><figcaption>DEMO · HEAD AND HAND CONTROL · 770-PART SAMPLE JET ENGINE</figcaption></figure>
+  <div class="g2">
+    <figure class="cover" style="--ar:16/9"><img src="assets/keo/keo-assembly.jpg" alt="A sample drone assembly of 453 parts opened in KEO" loading="lazy"><figcaption>SAMPLE ASSEMBLY · 453 PARTS, 142 MB STEP</figcaption></figure>
+    <figure class="cover" style="--ar:16/9"><img src="assets/keo/keo-airflow.jpg" alt="Airflow streaks running past the sample drone assembly" loading="lazy"><figcaption>AIRFLOW · LIVE WIND TUNNEL ON THE MODEL</figcaption></figure>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>770</b><span>Parts in the sample jet engine KEO opens, explodes and labels</span></div>
+    <div class="stat"><b>142 MB</b><span>Largest STEP assembly converted in the browser (468 solids)</span></div>
+    <div class="stat"><b>≈ 30% high</b><span>Airflow drag index against a sphere benchmark: for comparing variants, not a result</span></div>
+  </div>
+  <ul class="bul">
+    <li><b>Real size, head-tracked.</b> The webcam drives an off-axis projection so the part appears to sit behind the glass, and a real-size mode draws the model at scale beside a person, a hand or a door.</li>
+    <li><b>Hands and voice.</b> An open hand explodes an assembly, a fist puts it back, pointing selects a part and two hands zoom. Saying “Keo” starts a voice command. Mouse and keyboard work as the fallback.</li>
+    <li><b>Opens real CAD.</b> STEP, IGES, STL, BREP and zip files are converted in the browser with OpenCascade compiled to WebAssembly. Large assemblies are split into pieces, converted in parallel and kept in the browser, so they reopen in seconds.</li>
+    <li><b>Airflow.</b> A 3D lattice-Boltzmann (D3Q19) wind tunnel runs on the imported model in a background thread, with streaks coloured by speed.</li>
+    <li><b>Limits and next steps.</b> It is a prototype, not a product. Hand tracking and the projector and pyramid-hologram modes still need testing on more hardware, and there is no live link to a CAD package. Before building more I want to ask engineers where design review actually hurts.</li>
+  </ul>
+  <div class="specs"><div><span class="k">STACK</span>three.js · MediaPipe</div><div><span class="k">IMPORT</span>OpenCascade (WASM)</div><div><span class="k">SOLVER</span>Lattice-Boltzmann</div><div><span class="k">DEMO</span><a href="keo/" target="_blank" rel="noopener">Open KEO</a></div><div><span class="k">CODE</span><a href="https://github.com/kartikeytarar/kartikeytarar.github.io/tree/main/keo" target="_blank" rel="noopener">GitHub</a></div></div>
+  <div class="titleblock"><b>KARTIKEY TARAR</b><span>KEO VIEWER</span><span>SHEET 03 / 10</span></div>
+</section>
+
 <section class="sheet" id="dewleaf" aria-labelledby="h-dew">
   <div class="eyebrow">Product concept · Oct 2026</div>
   <h2 id="h-dew">Dewleaf: a leaf shower head for a baby bath</h2>
@@ -152,7 +177,7 @@ ul.bul li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height
     </ul>
   </div>
   <div class="specs"><div><span class="k">MATERIAL</span>PP + TPR</div><div><span class="k">HEAD</span>100 × 72 mm</div><div><span class="k">HOSE</span>Ø10 OD / Ø6 ID</div><div><span class="k">OUTLETS</span>34 × Ø1.1 mm</div><div><span class="k">TOOL</span>Fusion 360</div></div>
-  <div class="titleblock"><b>KARTIKEY TARAR</b><span>DEWLEAF</span><span>SHEET 03 / 10</span></div>
+  <div class="titleblock"><b>KARTIKEY TARAR</b><span>DEWLEAF</span><span>SHEET 04 / 10</span></div>
 </section>
 
 <section class="sheet" id="work" aria-labelledby="h-work">
@@ -179,7 +204,7 @@ ul.bul li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height
     <li>Built 3D-printed and laser-cut prototypes and tested fit and assembly on real hardware across design versions.</li>
     <li>Prepared mechanical drawings, bills of materials and product renders for demos and exhibitions.</li>
   </ul>
-  <div class="titleblock"><b>KARTIKEY TARAR</b><span>PROFESSIONAL WORK</span><span>SHEET 04 / 10</span></div>
+  <div class="titleblock"><b>KARTIKEY TARAR</b><span>PROFESSIONAL WORK</span><span>SHEET 05 / 10</span></div>
 </section>
 
 <section class="sheet" id="texttocad" aria-labelledby="h-t2c">
@@ -198,32 +223,7 @@ ul.bul li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height
     <li><b>Limits and next steps.</b> It handles new sizes of the 100 part types it learned, not new designs. Next: feature-based training data and a loop that runs each script and repairs its own errors.</li>
   </ul>
   <div class="specs"><div><span class="k">MODEL</span>Qwen2.5-Coder-1.5B</div><div><span class="k">METHOD</span>QLoRA fine-tune</div><div><span class="k">DATA</span>1,000 scripts</div><div><span class="k">RESULT</span>100% valid solids</div><div><span class="k">CODE</span><a href="https://github.com/kartikeytarar/TextToCAD-FreeCAD" target="_blank" rel="noopener">GitHub</a></div></div>
-  <div class="titleblock"><b>KARTIKEY TARAR</b><span>TEXT-TO-CAD</span><span>SHEET 05 / 10</span></div>
-</section>
-
-<section class="sheet" id="keo" aria-labelledby="h-keo">
-  <div class="eyebrow">Software · personal project · Oct–Nov 2026</div>
-  <h2 id="h-keo">KEO: a head- and hand-controlled CAD viewer in the browser</h2>
-  <p class="lead">A prototype that shows a CAD model at real size in a plain browser tab. The webcam tracks your head so the model appears to sit behind the screen, and your hands explode, assemble, select and zoom it. I built it with AI assistance (Claude) to see whether a design review could work without a headset.</p>
-  <figure><video controls playsinline preload="metadata" poster="assets/keo/keo-poster.jpg" src="assets/keo/keo-demo.mp4"></video><figcaption>DEMO · HEAD AND HAND CONTROL · 770-PART SAMPLE JET ENGINE</figcaption></figure>
-  <div class="g2">
-    <figure class="cover" style="--ar:16/9"><img src="assets/keo/keo-assembly.jpg" alt="A sample drone assembly of 453 parts opened in KEO" loading="lazy"><figcaption>SAMPLE ASSEMBLY · 453 PARTS, 142 MB STEP</figcaption></figure>
-    <figure class="cover" style="--ar:16/9"><img src="assets/keo/keo-airflow.jpg" alt="Airflow streaks running past the sample drone assembly" loading="lazy"><figcaption>AIRFLOW · LIVE WIND TUNNEL ON THE MODEL</figcaption></figure>
-  </div>
-  <div class="stats">
-    <div class="stat"><b>770</b><span>Parts in the sample jet engine KEO opens, explodes and labels</span></div>
-    <div class="stat"><b>142 MB</b><span>Largest STEP assembly converted in the browser (468 solids)</span></div>
-    <div class="stat"><b>≈ 30% high</b><span>Airflow drag index against a sphere benchmark: for comparing variants, not a result</span></div>
-  </div>
-  <ul class="bul">
-    <li><b>Real size, head-tracked.</b> The webcam drives an off-axis projection so the part appears to sit behind the glass, and a real-size mode draws the model at scale beside a person, a hand or a door.</li>
-    <li><b>Hands and voice.</b> An open hand explodes an assembly, a fist puts it back, pointing selects a part and two hands zoom. Saying “Keo” starts a voice command. Mouse and keyboard work as the fallback.</li>
-    <li><b>Opens real CAD.</b> STEP, IGES, STL, BREP and zip files are converted in the browser with OpenCascade compiled to WebAssembly. Large assemblies are split into pieces, converted in parallel and kept in the browser, so they reopen in seconds.</li>
-    <li><b>Airflow.</b> A 3D lattice-Boltzmann (D3Q19) wind tunnel runs on the imported model in a background thread, with streaks coloured by speed.</li>
-    <li><b>Limits and next steps.</b> It is a prototype, not a product. Hand tracking and the projector and pyramid-hologram modes still need testing on more hardware, and there is no live link to a CAD package. Before building more I want to ask engineers where design review actually hurts.</li>
-  </ul>
-  <div class="specs"><div><span class="k">STACK</span>three.js · MediaPipe</div><div><span class="k">IMPORT</span>OpenCascade (WASM)</div><div><span class="k">SOLVER</span>Lattice-Boltzmann</div><div><span class="k">DEMO</span><a href="keo/" target="_blank" rel="noopener">Open KEO</a></div><div><span class="k">CODE</span><a href="https://github.com/kartikeytarar/kartikeytarar.github.io/tree/main/keo" target="_blank" rel="noopener">GitHub</a></div></div>
-  <div class="titleblock"><b>KARTIKEY TARAR</b><span>KEO VIEWER</span><span>SHEET 06 / 10</span></div>
+  <div class="titleblock"><b>KARTIKEY TARAR</b><span>TEXT-TO-CAD</span><span>SHEET 06 / 10</span></div>
 </section>
 
 <section class="sheet" id="auv" aria-labelledby="h-auv">
